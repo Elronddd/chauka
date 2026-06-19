@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>चौका | CHAUKA — Bihari &amp; North Indian Kitchen, Patna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Eczar:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===================== TOKENS ===================== */
+:root{
+  --maroon-950:#2A0A0C;
+  --maroon-900:#3B0F12;
+  --maroon-800:#551319;
+  --maroon-700:#6E1A21;
+  --gold-300:#F3DC95;
+  --gold-500:#D8AB3F;
+  --gold-600:#B9872A;
+  --gold-900:#7A5A1B;
+  --cream-50:#FBF3E2;
+  --cream-100:#F4E8CC;
+  --cream-200:#ECDAAF;
+  --ink-900:#2B1C12;
+  --ink-600:#5B4A3A;
+  --leaf-600:#3F7D44;
+  --rust-600:#A23B25;
+  --shadow:0 10px 30px -10px rgba(42,10,12,.35);
+  --maxw:1240px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--cream-50);
+  color:var(--ink-900);
+  font-family:'Jost',sans-serif;
+  font-size:16px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4{margin:0;font-weight:600;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.eyebrow{
+  font-family:'Eczar',serif;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-size:.72rem;
+  font-weight:600;
+}
+::selection{background:var(--gold-300);color:var(--maroon-950);}
+:focus-visible{outline:2px solid var(--gold-600);outline-offset:3px;}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important;}
+}
+
+/* ===================== TEXTURE (mandala motif) ===================== */
+.texture-maroon{
+  background-color:var(--maroon-950);
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(216,171,63,.10), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23D8AB3F' stroke-opacity='0.10' stroke-width='1'%3E%3Ccircle cx='80' cy='80' r='70'/%3E%3Ccircle cx='80' cy='80' r='50'/%3E%3Ccircle cx='80' cy='80' r='30'/%3E%3Cpath d='M80 10 L80 150 M10 80 L150 80 M27 27 L133 133 M133 27 L27 133'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:auto, 160px 160px;
+}
+
+/* ===================== NAV ===================== */
+.site-nav{
+  position:sticky;top:0;z-index:60;
+  background:linear-gradient(180deg,var(--maroon-950),var(--maroon-900));
+  border-bottom:1px solid var(--gold-900);
+}
+.nav-inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:22px;
+}
+.brand{
+  display:flex;align-items:baseline;gap:8px;flex:0 0 auto;
+  font-family:'Eczar',serif;color:var(--gold-300);
+}
+.brand .deva{font-size:1.5rem;font-weight:700;}
+.brand .lat{font-size:.68rem;letter-spacing:.28em;color:var(--gold-500);}
+.nav-links{
+  display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+.nav-links::-webkit-scrollbar{display:none;}
+.nav-links a{
+  white-space:nowrap;color:var(--cream-100);font-size:.82rem;
+  font-family:'Jost',sans-serif;font-weight:500;letter-spacing:.03em;
+  padding:8px 12px;border-radius:999px;transition:background .2s,color .2s;
+}
+.nav-links a:hover, .nav-links a.active{
+  background:rgba(216,171,63,.16);color:var(--gold-300);
+}
+
+/* ===================== ARCH SIGNATURE SHAPE ===================== */
+.arch{
+  border-radius:50% 50% 14px 14px / 26% 26% 14px 14px;
+}
+.arch-cap{
+  width:64px;height:32px;margin:0 auto 10px;
+  background:linear-gradient(180deg,var(--gold-300),var(--gold-600));
+  border-radius:50% 50% 6px 6px / 100% 100% 6px 6px;
+  position:relative;
+  box-shadow:0 2px 8px rgba(122,90,27,.35);
+}
+.arch-cap::after{
+  content:"";position:absolute;inset:4px 4px 6px;
+  border-radius:50% 50% 4px 4px / 100% 100% 4px 4px;
+  background:var(--maroon-950);
+}
+.cat-head{text-align:center;margin:0 0 28px;}
+.cat-head h3{
+  font-family:'Eczar',serif;font-size:1.5rem;color:var(--maroon-900);
+  letter-spacing:.01em;
+}
+.cat-head .cat-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--ink-600);
+  font-size:.98rem;margin-top:2px;
+}
+
+/* ===================== HERO ===================== */
+.hero{
+  position:relative;
+  padding:64px 20px 80px;
+  overflow:hidden;
+}
+.hero-grid{
+  max-width:var(--maxw);margin:0 auto;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+}
+.hero-arch{
+  width:min(620px,92vw);
+  background:
+    radial-gradient(120% 90% at 50% 18%, #FCEFC2 0%, var(--gold-300) 38%, var(--gold-600) 78%, var(--gold-900) 100%);
+  border-radius:50% 50% 22px 22px / 30% 30% 22px 22px;
+  box-shadow:0 0 0 2px var(--maroon-950), 0 0 0 7px var(--gold-600), 0 25px 60px -15px rgba(0,0,0,.55);
+  padding:62px 36px 50px;
+  position:relative;
+}
+.hero-arch::before{
+  content:"";position:absolute;inset:14px;
+  border-radius:50% 50% 14px 14px / 28% 28% 14px 14px;
+  border:1px solid rgba(122,90,27,.55);
+  pointer-events:none;
+}
+.lotus{width:46px;height:46px;margin:0 auto 14px;display:block;}
+.hero-arch .deva-word{
+  font-family:'Eczar',serif;font-weight:700;color:var(--maroon-950);
+  font-size:clamp(2.6rem,9vw,4.2rem);line-height:1;margin:0;
+}
+.hero-arch .lat-word{
+  font-family:'Jost',sans-serif;font-weight:600;color:var(--maroon-800);
+  letter-spacing:.34em;font-size:.95rem;margin-top:10px;
+}
+.hero-arch .tag{
+  font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--maroon-900);
+  font-size:1.18rem;margin-top:18px;max-width:380px;margin-left:auto;margin-right:auto;
+}
+.hero-arch .divider{
+  width:120px;height:1px;background:var(--maroon-800);opacity:.4;margin:18px auto;
+}
+.cta-row{margin-top:24px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn{
+  font-family:'Jost',sans-serif;font-weight:600;font-size:.85rem;letter-spacing:.06em;
+  padding:13px 30px;border-radius:999px;cursor:pointer;border:1px solid transparent;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  display:inline-block;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{
+  background:var(--maroon-950);color:var(--gold-300);
+  box-shadow:0 10px 24px -8px rgba(42,10,12,.55);
+}
+.btn-primary:hover{background:var(--maroon-900);}
+.btn-ghost{
+  background:transparent;color:var(--maroon-950);border-color:var(--maroon-800);
+}
+.btn-ghost:hover{background:rgba(85,19,25,.08);}
+.hero-foot{
+  margin-top:26px;color:var(--gold-300);font-size:.78rem;letter-spacing:.05em;opacity:.85;
+}
+
+/* ===================== PROMISE STRIP ===================== */
+.promise{
+  background:var(--cream-100);border-top:1px solid var(--cream-200);border-bottom:1px solid var(--cream-200);
+}
+.promise-grid{
+  max-width:var(--maxw);margin:0 auto;padding:34px 24px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+}
+.promise-item{text-align:center;padding:0 10px;position:relative;}
+.promise-item + .promise-item::before{
+  content:"";position:absolute;left:-14px;top:8%;bottom:8%;width:1px;background:var(--gold-600);opacity:.4;
+}
+.promise-item svg{width:30px;height:30px;margin:0 auto 10px;color:var(--gold-600);}
+.promise-item h4{
+  font-family:'Eczar',serif;font-size:.95rem;letter-spacing:.04em;color:var(--maroon-900);
+  margin-bottom:6px;text-transform:uppercase;
+}
+.promise-item p{font-size:.86rem;color:var(--ink-600);margin:0;}
+@media (max-width:760px){
+  .promise-grid{grid-template-columns:1fr;gap:22px;}
+  .promise-item + .promise-item::before{display:none;}
+}
+
+/* ===================== MENU CONTROLS ===================== */
+.menu-controls{
+  background:var(--cream-50);
+  border-bottom:1px solid var(--cream-200);
+  padding:22px 0;position:relative;z-index:5;
+}
+.controls-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.search-row{display:flex;gap:12px;align-items:center;margin-bottom:14px;flex-wrap:wrap;}
+.search-box{
+  flex:1 1 240px;position:relative;
+}
+.search-box input{
+  width:100%;padding:12px 18px 12px 40px;border-radius:999px;
+  border:1.5px solid var(--cream-200);background:#fff;
+  font-family:'Jost',sans-serif;font-size:.92rem;color:var(--ink-900);
+}
+.search-box input:focus{border-color:var(--gold-600);}
+.search-box svg{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  width:16px;height:16px;color:var(--ink-600);
+}
+.veg-toggle{
+  display:flex;background:#fff;border:1.5px solid var(--cream-200);border-radius:999px;padding:3px;
+  flex:0 0 auto;
+}
+.veg-toggle button{
+  border:none;background:transparent;padding:9px 16px;border-radius:999px;cursor:pointer;
+  font-family:'Jost',sans-serif;font-size:.8rem;font-weight:600;color:var(--ink-600);
+  display:flex;align-items:center;gap:6px;transition:background .18s,color .18s;
+}
+.veg-toggle button.active{background:var(--maroon-950);color:var(--gold-300);}
+.dot{width:9px;height:9px;border-radius:2px;display:inline-block;border:1.5px solid currentColor;flex:0 0 auto;}
+.dot.veg{color:var(--leaf-600);}
+.dot.nonveg{color:var(--rust-600);}
+.dot.veg::after,.dot.nonveg::after{
+  content:"";display:block;width:4px;height:4px;border-radius:50%;background:currentColor;margin:1.2px auto;
+}
+.chip-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin;}
+.chip{
+  white-space:nowrap;font-family:'Jost',sans-serif;font-size:.78rem;font-weight:500;
+  padding:8px 16px;border-radius:999px;border:1.3px solid var(--cream-200);background:#fff;
+  color:var(--ink-600);cursor:pointer;transition:all .18s ease;flex:0 0 auto;
+}
+.chip:hover{border-color:var(--gold-600);}
+.chip.active{background:var(--gold-600);border-color:var(--gold-600);color:#fff;}
+.result-meta{font-size:.78rem;color:var(--ink-600);margin-top:10px;font-style:italic;font-family:'Cormorant Garamond',serif;}
+
+/* ===================== MENU SECTIONS ===================== */
+.menu-section{padding:56px 0 18px;}
+.group-title{
+  text-align:center;margin-bottom:8px;
+}
+.group-title .eyebrow{color:var(--gold-600);display:block;margin-bottom:6px;}
+.group-title h2{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,2.7rem);color:var(--maroon-950);
+}
+.group-rule{width:70px;height:2px;background:var(--gold-600);margin:14px auto 46px;border-radius:2px;}
+
+.category-block{margin-bottom:54px;}
+.card-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
+  max-width:980px;margin:0 auto;
+}
+@media (max-width:720px){.card-grid{grid-template-columns:1fr;}}
+
+.dish-card{
+  background:#fff;border:1px solid var(--cream-200);border-radius:14px;
+  padding:16px 18px;position:relative;transition:box-shadow .2s, border-color .2s, transform .2s;
+}
+.dish-card:hover{box-shadow:var(--shadow);border-color:var(--gold-500);transform:translateY(-2px);}
+.dish-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
+.dish-name{
+  font-family:'Eczar',serif;font-size:1.04rem;font-weight:600;color:var(--ink-900);
+  display:flex;align-items:center;gap:8px;line-height:1.3;
+}
+.dish-price{
+  flex:0 0 auto;font-family:'Jost',sans-serif;font-weight:600;color:var(--gold-900);
+  font-size:.95rem;text-align:right;white-space:nowrap;
+}
+.dish-price .unit{font-size:.68rem;color:var(--ink-600);font-weight:400;display:block;}
+.dish-price .hf{display:flex;gap:8px;font-size:.78rem;}
+.dish-price .hf b{display:block;font-size:.92rem;color:var(--gold-900);}
+.dish-price .hf span{color:var(--ink-600);font-weight:400;font-size:.66rem;text-transform:uppercase;letter-spacing:.04em;}
+.dish-price.muted{color:var(--ink-600);font-weight:500;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:.85rem;}
+
+.detail-toggle{
+  margin-top:8px;border:none;background:none;padding:0;cursor:pointer;
+  font-family:'Jost',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.05em;
+  color:var(--gold-600);display:inline-flex;align-items:center;gap:5px;text-transform:uppercase;
+}
+.detail-toggle svg{width:10px;height:10px;transition:transform .2s;}
+.detail-toggle[aria-expanded="true"] svg{transform:rotate(180deg);}
+.dish-desc{
+  max-height:0;overflow:hidden;transition:max-height .28s ease;
+}
+.dish-desc p{
+  font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--ink-600);
+  margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--cream-200);line-height:1.5;
+}
+.no-results{
+  text-align:center;padding:50px 20px;color:var(--ink-600);font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;
+}
+
+/* ===================== FOOTER ===================== */
+.footer{color:var(--cream-100);padding:64px 0 28px;margin-top:40px;}
+.footer-grid{
+  max-width:var(--maxw);margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;
+}
+.footer h3.brand-foot{
+  font-family:'Eczar',serif;color:var(--gold-300);font-size:2rem;margin-bottom:8px;
+}
+.footer-tag{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--cream-200);opacity:.85;font-size:.95rem;}
+.footer h5{
+  font-family:'Jost',sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:.74rem;
+  color:var(--gold-500);margin-bottom:14px;
+}
+.footer p, .footer address{font-size:.88rem;color:var(--cream-100);opacity:.88;margin:0 0 8px;font-style:normal;}
+.platform-badges{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.platform-badges span{
+  border:1px solid var(--gold-900);padding:7px 14px;border-radius:8px;font-size:.78rem;
+  font-weight:600;color:var(--gold-300);letter-spacing:.03em;
+}
+.hours-row{display:flex;justify-content:space-between;font-size:.86rem;padding:4px 0;color:var(--cream-100);opacity:.88;}
+.footer-bottom{
+  max-width:var(--maxw);margin:36px auto 0;padding:20px 24px 0;border-top:1px solid var(--gold-900);
+  font-size:.76rem;color:var(--gold-500);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+}
+@media (max-width:760px){
+  .footer-grid{grid-template-columns:1fr;gap:30px;}
+}
+
+/* Back to top */
+.totop{
+  position:fixed;right:18px;bottom:18px;z-index:50;width:42px;height:42px;border-radius:50%;
+  background:var(--maroon-950);color:var(--gold-300);border:1px solid var(--gold-600);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;
+  transition:opacity .25s, transform .25s;box-shadow:var(--shadow);
+}
+.totop.show{opacity:1;pointer-events:auto;}
+.totop:hover{transform:translateY(-3px);}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="site-nav texture-maroon" aria-label="Primary">
+  <div class="nav-inner">
+    <a href="#home" class="brand" aria-label="Chauka home">
+      <span class="deva">चौका</span><span class="lat">CHAUKA</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#thali">Thali &amp; Specials</a>
+      <a href="#starters">Starters</a>
+      <a href="#soups">Soups &amp; Salads</a>
+      <a href="#bihari">Bihari Delight</a>
+      <a href="#mains">Main Course</a>
+      <a href="#ricebread">Rice, Dal &amp; Bread</a>
+      <a href="#chinese">Chinese</a>
+      <a href="#sides">Sides</a>
+      <a href="#desserts">Desserts</a>
+      <a href="#drinks">Beverages</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero texture-maroon" id="home">
+  <div class="hero-grid">
+    <div class="hero-arch arch">
+      <svg class="lotus" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#A23B25">
+          <path d="M32 40c0-10 6-18 0-26-6 8 0 16 0 26Z"/>
+          <path d="M32 40c-3-11-12-16-20-15 4 9 12 13 20 15Z"/>
+          <path d="M32 40c3-11 12-16 20-15-4 9-12 13-20 15Z"/>
+          <path d="M32 40c-7-7-17-8-24-3 6 7 16 8 24 3Z"/>
+          <path d="M32 40c7-7 17-8 24-3-6 7-16 8-24 3Z"/>
+        </g>
+        <path d="M14 44c4 8 12 13 18 13s14-5 18-13c-6 3-12 4-18 4s-12-1-18-4Z" fill="#7A5A1B"/>
+      </svg>
+      <h1 class="deva-word">चौका</h1>
+      <div class="lat-word">C&nbsp;H&nbsp;A&nbsp;U&nbsp;K&nbsp;A</div>
+      <div class="divider"></div>
+      <p class="tag">A Bihari &amp; North Indian kitchen — slow-cooked over charcoal, ground by hand, served with heart in the heart of Patna.</p>
+      <div class="cta-row">
+        <a href="#thali" class="btn btn-primary">View Menu</a>
+        <a href="#footer" class="btn btn-ghost">Find Us</a>
+      </div>
+    </div>
+    <p class="hero-foot">BORING ROAD · PATNA &nbsp;•&nbsp; OPEN ON ZOMATO &amp; SWIGGY</p>
+  </div>
+</header>
+
+<!-- ===================== PROMISE STRIP ===================== -->
+<section class="promise" aria-label="Our promise">
+  <div class="promise-grid">
+    <div class="promise-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2c4 5 7 8.5 7 12.5A7 7 0 0 1 5 14.5C5 10.5 8 7 12 2Z"/></svg>
+      <h4>Half-Glass Water Pledge</h4>
+      <p>We proudly support the Aadha Glass Paani Abhiyan — serving water mindfully to cut everyday waste.</p>
+    </div>
+    <div class="promise-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="13" r="7"/><path d="M9 6l1.5-3M15 6l-1.5-3"/></svg>
+      <h4>Hand-Ground Spices</h4>
+      <p>Our masalas are pure and desi, ground fresh on a traditional silbatta — never machine-milled.</p>
+    </div>
+    <div class="promise-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 13c0-4 3-8 7-8s7 4 7 8-3 7-7 7-7-3-7-7Z"/><path d="M9 13h6"/></svg>
+      <h4>Homemade Pickles</h4>
+      <p>Our achaar is handmade by rural women of Muzaffarpur — authentic flavour with a social heart.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MENU CONTROLS ===================== -->
+<section class="menu-controls">
+  <div class="controls-inner">
+    <div class="search-row">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" id="searchInput" placeholder="Search the menu — e.g. paneer, biryani, kebab…" aria-label="Search menu">
+      </div>
+      <div class="veg-toggle" role="group" aria-label="Filter by veg or non-veg">
+        <button class="active" data-veg="all" type="button">All</button>
+        <button data-veg="veg" type="button"><span class="dot veg"></span>Veg</button>
+        <button data-veg="nonveg" type="button"><span class="dot nonveg"></span>Non-Veg</button>
+      </div>
+    </div>
+    <div class="chip-row" id="chipRow"></div>
+    <div class="result-meta" id="resultMeta"></div>
+  </div>
+</section>
+
+<main id="menuRoot"></main>
+
+<div class="no-results" id="noResults" style="display:none;">No dishes found on the chauka — try a different search or filter.</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer texture-maroon" id="footer">
+  <div class="footer-grid">
+    <div>
+      <h3 class="brand-foot">चौका</h3>
+      <p class="footer-tag">"Thank you for dining with us! We appreciate your support and hope to see you again soon."</p>
+      <div class="platform-badges">
+        <span>Zomato</span>
+        <span>Swiggy</span>
+      </div>
+    </div>
+    <div>
+      <h5>Visit Us</h5>
+      <address>Near Blue Moon / Karlo Automobile,<br>Boring Road, Patna&nbsp;–&nbsp;800001</address>
+      <p>Dine-in &amp; Takeaway · Delivery via Zomato &amp; Swiggy</p>
+    </div>
+    <div>
+      <h5>Kitchen Hours</h5>
+      <div class="hours-row"><span>Lunch</span><span>12:00 – 3:30 PM</span></div>
+      <div class="hours-row"><span>Dinner</span><span>7:00 – 11:00 PM</span></div>
+      <div class="hours-row"><span>Saturday Special</span><span>Dal Khichari</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="yr"></span> Chauka, Patna. All rights reserved.</span>
+    <span>Prices in ₹ (INR) · Inclusive of taxes · Subject to change</span>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* =================================================================
+   MENU DATA — extracted verbatim from the Chauka physical menu.
+   v: true = veg, false = non-veg, 'b' = available veg & non-veg
+   f = full price, h = half price, u = unit note (e.g. "4 Pcs")
+   ================================================================= */
+const MENU = [
+{id:"thali", label:"Thali & Specials", cats:[
+  {cat:"Corporate Thali — Pre-Bulk Orders Only", items:[
+    {n:"Veg Thali", f:269, v:true, d:"2 Rotis or Masala Kulcha, jeera rice or peas pulao, yellow dal, seasonal vegetables, bhujia, salad, chutney, pickle, curd and a sweet."},
+    {n:"Veg Maharaja Thali", f:289, v:true, d:"2 Rotis or 1 Masala Kulcha, jeera rice or peas pulao, yellow dal, seasonal vegetables, 1 paneer item of your choice, bhujia, salad, chutney, pickle, curd or raita and a sweet."},
+    {n:"Non-Veg Thali", f:315, v:false, d:"2 Rotis or 1 Masala Kulcha, jeera rice or peas pulao, chana dal, 1 chicken item of your choice (2pcs), salad, chutney, pickle, curd and a sweet."},
+    {n:"Non-Veg Maharaja Thali", f:375, v:false, d:"2 Rotis or 1 Masala Kulcha, jeera rice or peas pulao, chana dal, 1 chicken item of your choice (2pcs), 1 fish fry or dry paneer, green vegetable, salad, chutney, pickle, curd or raita and a sweet."}
+  ]},
+  {cat:"Signature Dishes", items:[
+    {n:"Chauka Dal Makhan Marke", f:279, v:true, d:"Black urad dal and red kidney beans (rajma), simmered in authentic hand-ground spices and cooked overnight in an earthen pot over a charcoal pit, finished with cream, butter and tomato — a traditional delicacy."},
+    {n:"Chauka Desi Bachwa", f:299, u:"4 Pcs", v:false, d:"Sone Bachwa fish cooked in an authentic hand-ground mustard gravy, for the true fish lover."},
+    {n:"Bater (Quail)", f:449, u:"2 Pcs", v:false, d:"Exotic bater marinated overnight in yoghurt, hand-ground spices and the chef's own secret herbs, then slow-cooked over a charcoal pit into a fragrant, fulfilling delicacy for non-veg lovers."},
+    {n:"Chauka Desi Murga", f:449, v:false, d:"Handpicked country chicken, marinated overnight in homemade, stone-ground spices and simmered for hours over a slow charcoal flame in an earthen pot — a gently smoky, cherished homestyle classic with the Chauka twist."},
+    {n:"Chauka Desi Rehu", f:215, u:"2 Pcs", v:false, d:"Fresh desi Rehu fish cooked in an authentic hand-ground mustard gravy, for the true fish lover."},
+    {n:"Chauka Desi Mutton", f:449, u:"4 Pcs", v:false, d:"Handpicked desi mutton simmered in hand-ground spices, slow-cooked in an earthen pot over a wood-charcoal pit for more than 4 hours — the wait is well worth it."},
+    {n:"Chauka Murg Tariwala", f:379, u:"4 Pcs", v:false, d:"A dish every Bihari takes pride in — chicken marinated overnight in yoghurt and a beautiful mix of spices, finished with a dollop of melting cream and butter. A North Indian-style preparation perfect for a dinner party."}
+  ]}
+]},
+{id:"starters", label:"Starters", cats:[
+  {cat:"Veg Starter — From the Tandoor", items:[
+    {n:"Paneer Tikka", f:259, v:true, d:"Soft paneer cubes marinated in tandoori masala and grilled."},
+    {n:"Paneer Malai Kebab", f:289, v:true, d:"Soft paneer tikka marinated in our creamy marinade with classic capsicum, onion and tomato."},
+    {n:"Chauka Special Mumtazi Paneer Tikka", f:349, v:true, d:"Made with the chef's special recipe."},
+    {n:"Kukure Dahi ke Kebab", f:275, v:true, d:"Fried patties made with a mixture of hung curd, paneer, onions and white bread crumbs."},
+    {n:"Tandoori Platter", f:499, v:true, d:"An assorted tandoori platter of the chef's selection."},
+    {n:"Mushroom Tikka", f:299, v:true, d:"Mushrooms marinated in tandoori masala and grilled."},
+    {n:"Soya Chaap Tikka", f:299, v:true, d:"Soft soya chaap chunks marinated and grilled in tandoori masala."},
+    {n:"Hara Bhara Kebab", f:275, v:true, d:"Healthy green vegetable and potato cakes with subtle spices."},
+    {n:"Paneer Achari Tikka", f:279, v:true, d:"Cottage cheese marinated in Indian spices and achari-flavoured hung curd, served with mint chutney."},
+    {n:"Veg Seekh Kebab", f:229, v:true, d:"A delicious snack-cum-starter made using mixed vegetables and spices."},
+    {n:"Paneer Seekh Kebab", f:275, v:true, d:"Minced paneer mixed with coriander, mint, green chillies and Indian spices, cooked on a skewer and served with green chutney."}
+  ]},
+  {cat:"Non-Veg Starter — From the Tandoor", items:[
+    {n:"Murg Lahsooni Kebab", f:339, v:false, d:"Boneless chicken marinated in curd, fresh garlic and traditional Indian spices."},
+    {n:"Murg Tikka", f:339, v:false, d:"Succulent pieces of chicken marinated in a seasoned masala and cooked to perfection in a tandoor."},
+    {n:"Murg Malai Kebab", f:339, v:false, d:"A yummy, creamy and mind-blowing chicken appetiser that will tickle your taste buds."},
+    {n:"Tandoori Chicken", h:275, f:475, v:false, d:"Juicy chicken seasoned with freshly ground spices and grilled to perfection."},
+    {n:"Murg Reshmi Kebab", f:339, v:false, d:"Grilled chicken marinated in hung yoghurt and cream, delicately flavoured with white pepper and cardamom."},
+    {n:"Murg Afgani", f:339, v:false, d:"Deliciously grilled Afghan-style chicken tikka, bursting with flavour and succulent tenderness."},
+    {n:"Mahi Lahsooni Tikka", f:339, v:false, d:"Cubes of chicken, basically marinated with Indian spices, garlic and butter as the main ingredients."},
+    {n:"Ajwain Fish Tikka", f:339, v:false, d:"Chunks of fish marinated with spices and infused with carrom seeds, grilled to perfection."},
+    {n:"Murg Hariyali Kebab", f:339, v:false, d:"Boneless chicken marinated in a green masala paste and smeared with generous helpings of fine golden butter."},
+    {n:"Assorted Non-Veg Kebab Platter", f:599, u:"12 Pcs", v:false, d:"A grand platter of the chef's favourite non-veg kebabs."},
+    {n:"Murg Kali Mirch Kebab", f:339, v:false, d:"Tender grilled chicken marinated in aromatic spices for a mouth-watering delight."},
+    {n:"Murg Seekh Kebab", f:339, v:false, d:"Tandoor-cooked, minced chicken seasoned with whole spices and moulded onto skewers."},
+    {n:"Murg Achari Tikka", f:339, v:false, d:"Juicy, succulent chicken leg meat marinated in house-made achari masala and charred in the tandoor."},
+    {n:"Chauka Special Kebab", f:549, v:false, d:"Made with the chef's special recipe."},
+    {n:"Murg Leg Kebab (2 Pc)", f:299, v:false, d:"Enjoy the taste of this soft, savoury chicken-leg piece, packed with flavour."},
+    {n:"Murg Boti Kebab", f:315, v:false, d:"Chicken pieces marinated in yoghurt, ginger-garlic paste, lemon juice, cumin, coriander, turmeric, red chilli and garam masala, then skewered and grilled over charcoal for a smoky, juicy texture."},
+    {n:"Prawn Tikka", f:549, v:false, d:"Succulent, juicy prawns marinated in red tikka masala and slow-barbequed."}
+  ]},
+  {cat:"Veg Chinese Starter", items:[
+    {n:"Paneer Chilli Dry", f:279, v:true, d:"Soft paneer slow-cooked with a flavourful chilli sauce and other masalas."},
+    {n:"Veg Manchurian", f:229, v:true, d:"Mixed-vegetable fried balls, onion and capsicum tossed in a classic Manchurian sauce."},
+    {n:"Baby Corn Honey Crispy", f:279, v:true, d:"Fried baby corn pieces cooked in a sticky, delicious sauce of chillies, honey and sesame seeds."},
+    {n:"Baby Corn Crispy Salted Pepper", f:279, v:true, d:"Crispy baby corn tossed with sea salt, black pepper and burnt garlic."},
+    {n:"Paneer 90", f:279, v:true, d:"Made with the chef's special recipe."},
+    {n:"Mushroom Chilli", f:299, v:true, d:"Mushrooms stir-fried with onion, garlic, soy sauce, oyster sauce and a medley of seasonings and spices."},
+    {n:"Crispy Chilli Potato", f:189, v:true, d:"An Indo-Chinese starter of fried potatoes tossed in a spicy, slightly sweet-and-sour chilli sauce."},
+    {n:"Baby Corn Mushroom Salt & Pepper", f:289, v:true, d:"Crispy mushrooms and baby corn tossed with sea salt, black pepper and burnt garlic."},
+    {n:"Baby Corn Crispy", f:279, v:true, d:"Crispy fried baby corn tossed in hot chilli sauce with onion and capsicum."},
+    {n:"Crispy Vegetable Salt & Pepper", f:219, v:true, d:"Crispy assorted vegetables tossed with sea salt, black pepper and burnt garlic."},
+    {n:"Veg Spring Roll", f:179, v:true, d:"Deep-fried flour sheets stuffed with a seasoned, assorted vegetable filling."},
+    {n:"Veg Chowmein", f:199, v:true, d:"A flavour-packed dish of noodles and assorted vegetables tossed in a soy, celery, chilli and vinegar-based sauce."},
+    {n:"Paneer 65", f:289, v:true, d:"Crispy fried cottage-cheese chunks stir-fried with freshly chopped chillies and curry leaves, seasoned with a traditional mix of spices."},
+    {n:"Soya Chaap Chilli", f:299, v:true, d:"Soya chaap stir-fried in a spicy chilli sauce with capsicum and onion."},
+    {n:"Schezwan Noodle", f:219, v:true, d:"Vegetables and soft noodles tossed in a flavourful schezwan sauce."},
+    {n:"Paneer Hakka Noodle", f:229, v:true, d:"A deliciously aromatic dish of noodles tossed and stir-fried with vegetables and paneer."}
+  ]},
+  {cat:"Non-Veg Chinese Starter", items:[
+    {n:"Chicken 65", f:299, v:false, d:"Deep-fried chunks of chicken wok-tossed in an in-house red sauce with diced capsicum, onion, ginger, garlic, curd and curry leaves. An all-time best-seller."},
+    {n:"Chicken Hakka Noodle", f:259, v:false, d:"A classic dish of noodles cooked hakka-style with shredded chicken, veggies and a dash of soy."},
+    {n:"Chicken Wings (6 Pcs)", f:299, v:false, d:"Juicy chicken wings marinated with spices and special masala, deep-fried to perfection."},
+    {n:"Chicken 90", f:299, v:false, d:"Made with the chef's special recipe."},
+    {n:"Chicken Black Pepper", f:299, v:false, d:"Tender chicken pieces coated in a rich black-pepper sauce with onions, garlic and a generous hit of black pepper."},
+    {n:"Fish Salt & Pepper", f:299, v:false, d:"Crispy, battered fish pieces seasoned with salt, pepper and other spices — served hot and aromatic."},
+    {n:"Fish Chilli", f:299, v:false, d:"A tantalising seafood delicacy bursting with flavour and succulent fish."},
+    {n:"Butter Fried Prawn", f:549, v:false, d:"The best flavour combination of lemon, garlic and golden butter, drizzled over perfectly cooked prawns."},
+    {n:"Prawn Chilli", f:549, v:false, d:"Prawns cooked with capsicum, onion, chopped garlic and soy sauce."},
+    {n:"Egg Chowmein", f:229, v:false, d:"Noodles worked up in a wok with crunchy vegetables, shredded egg, soy sauce, hot sauce and vinegar."},
+    {n:"Chicken Chowmein", f:259, v:false, d:"Noodles worked up in a wok with crunchy vegetables, chicken, soy sauce, hot sauce and vinegar."},
+    {n:"Egg Hakka Noodle", f:229, v:false, d:"A delicious combo of tender noodles and scrambled egg, seasoned with a choice of condiments."},
+    {n:"Mix Chowmein (Non-Veg)", f:299, v:false, d:"Noodles, chicken, eggs and assorted vegetables tossed in a soy, celery, chilli and vinegar-based sauce."},
+    {n:"Chauka Special Chowmein (Veg / Non-Veg)", h:249, f:315, v:"b", d:"Made with the chef's special recipe — available in veg or non-veg style."},
+    {n:"American Chop Suey (Veg)", f:229, v:true, d:"A sweet and tangy sauce packed with julienned veggies, served with crispy fried noodles on the side."},
+    {n:"American Chop Suey (Non-Veg)", f:279, v:false, d:"A sweet and tangy sauce of chicken and veggies, garnished with a sunny-side-up egg, served with crispy fried noodles on the side."},
+    {n:"Chauka Special Chop Suey", f:299, v:false, d:"Made with the chef's special recipe."},
+    {n:"Chicken Sweet & Sour", f:279, v:false, d:"Stir-fried chicken tossed in a special, in-house sweet and sour sauce with spices."},
+    {n:"Chilli Chicken (Bone-In)", f:279, v:false, d:"Crispy chicken chunks lightly tossed in a spicy chilli sauce."},
+    {n:"Chilli Chicken (Boneless)", f:299, v:false, d:"Crispy boneless chicken chunks lightly tossed in a spicy chilli sauce."},
+    {n:"Crispy Honey Chicken", f:299, v:false, d:"Juicy chicken fried to a perfect golden brown and tossed with delectable honey flavours."},
+    {n:"Garlic Chicken", f:299, v:false, d:"Juicy chicken chunks sautéed with spices, chillies, onion, capsicum and soy sauce, packed with garlic flavour."},
+    {n:"Chicken Lollypop (6 Pcs)", f:299, v:false, d:"Chicken wings coated in a fiery red marinade of garlic, ginger, chilli and Chinese masala, deep-fried."},
+    {n:"Hot Garlic Chicken", f:299, v:false, d:"Juicy chicken cooked in a spicy, garlicky sauce for a burst of flavour."}
+  ]},
+  {cat:"Quick Bites", items:[
+    {n:"Assorted Vegetable Pakoda", f:179, v:true, d:"Assorted veggies dunked in besan batter and deep-fried."},
+    {n:"Paneer Pakoda", f:199, v:true, d:"Soft paneer cubes dunked in besan batter and deep-fried."},
+    {n:"Chicken Pakoda", f:249, v:false, d:"A crisp, fried appetiser made with chicken, gram flour, ginger-garlic, spice powders and herbs."},
+    {n:"Egg Pakoda", f:199, v:false, d:"Boiled eggs cut in half, dunked in besan batter and deep-fried."},
+    {n:"French Fries", f:159, v:true, d:"Potato sticks deep-fried and tossed with salt."},
+    {n:"Fish Finger with Tartar Sauce", f:279, v:false, d:"Golden, juicy fish fingers served with tangy tartar sauce."},
+    {n:"Crunchy Chicken", f:299, v:false, d:"A crispy and crunchy chicken starter pack!"},
+    {n:"Bread Pakoda", f:179, v:true, d:"Bread slices dunked in besan batter and deep-fried, served with chutney."},
+    {n:"Paneer Cutlet", f:199, v:true, d:"Pan-fried cutlets made with mashed paneer, vegetables and spices."},
+    {n:"Chicken Cutlet", f:269, v:false, d:"Minced chicken-breast pieces, coated with spices and seasoning and crumb-fried."},
+    {n:"Crunchy Prawn", f:599, v:false, d:"Prawn pieces marinated with masala, coated in crumbs and deep-fried."}
+  ]}
+]},
+{id:"soups", label:"Soups & Salads", cats:[
+  {cat:"Veg Soup", items:[
+    {n:"Cream of Mushroom", f:149, v:true, d:"A rich and creamy garlic mushroom soup with deep, earthy flavours."},
+    {n:"Manchow Soup", f:129, v:true, d:"Vegetables simmered in a hot, spicy, thick stock and topped with fried noodles."},
+    {n:"Lemon Coriander Soup", f:129, v:true, d:"A refreshing soup of vegetables simmered in a lemon and coriander based stock."},
+    {n:"Clear Soup", f:129, v:true, d:"A clear soup with shredded vegetables and spices, seasoned with pepper."},
+    {n:"Sweet Corn Soup", f:129, v:true, d:"A delicious blend of sweet corn and vegetables simmered in a tasty stock with sweet and spicy flavours."},
+    {n:"Hot & Sour Soup", f:129, v:true, d:"A delectable hot and sour soup packed with the goodness of vegetables."},
+    {n:"Cream of Tomato Soup", f:119, v:true, d:"A simple tomato soup, blended deliciously, topped with cream and served with crunchy croutons."},
+    {n:"Veg Cream Soup", f:129, v:true, d:"A puree of seasoned veggies with vegetable stock and a dash of béchamel sauce, garnished with fresh cream and served with croutons."},
+    {n:"Talumein Soup", f:129, v:true, d:"Exotic vegetables and steamed noodles in a thick vegetable stock, served hot and garnished with chopped coriander."}
+  ]},
+  {cat:"Non-Veg Soup", items:[
+    {n:"Chicken Mushroom Soup", f:179, v:false, d:"A creamy chicken and mushroom soup with succulent chicken, a rich broth and flavourful spices."},
+    {n:"Chicken Manchow Soup", f:169, v:false, d:"Chicken slivers simmered in a hot, spicy, thick stock and topped with fried noodles."},
+    {n:"Chicken Sweet Corn Soup", f:169, v:false, d:"A delicious blend of sweet and spicy flavours from chicken and sweet corn simmered in a tasty stock."},
+    {n:"Chicken Hot & Sour Soup", f:169, v:false, d:"Loaded with spicy and tangy flavours — this chicken soup tastes irresistibly yummy."},
+    {n:"Chicken Lemon Coriander Soup", f:169, v:false, d:"Chicken slivers simmered in a refreshing lemon and coriander based stock."},
+    {n:"Chicken Clear Soup", f:159, v:false, d:"A rich dose of protein in a mildly flavoured, nutritious chicken soup, perfect for cold evenings."},
+    {n:"Chicken Talumein Soup", f:179, v:false, d:"Exotic vegetables, steamed noodles and chicken cubes in a thick chicken stock, garnished with chopped coriander."}
+  ]},
+  {cat:"Salad", items:[
+    {n:"Fresh Garden Green Salad", f:99, v:true, d:"Add a healthy touch to your meal with this fresh salad made with leafy veggies."},
+    {n:"Onion Salad", f:59, v:true, d:"Onion salad with a squeeze of fresh lime."},
+    {n:"Sprout Beans Salad", f:149, v:true, d:"Assorted sprouts and vegetables tossed with lemon juice and chaat masala."},
+    {n:"Fruit Salad", f:179, v:true, d:"A delightfully wholesome dish — a healthy assortment of mixed fruits blended with mango pulp."},
+    {n:"Fruit Cream Salad", f:189, v:true, d:"All seasonal, fresh fruits topped with fresh cream."}
+  ]}
+]},
+{id:"bihari", label:"Bihari Delight", cats:[
+  {cat:"Bihari Delight", items:[
+    {n:"Kadhi Barri", f:159, v:true, d:"A yoghurt-based stew made by mixing yoghurt and gram flour, tempered with aromatic spices; barris are the pakoras or fritters in it."},
+    {n:"Bajaka Platter", f:199, v:true, d:"Assorted vegetables fried with gram flour and aromatic spices for a beautiful local flavour."},
+    {n:"Tilauri", f:79, v:true, d:"A mix of gram flour and white sesame seeds."},
+    {n:"Aaloo Dum Mattar", f:189, v:true, d:"Fresh boiled and fried potatoes and peas, cooked in a rich, creamy gravy with a blend of aromatic spices — a traditional dum aloo."},
+    {n:"Besan ki Sabji", f:189, v:true, d:"A popular North Indian vegetarian dish of gram-flour dumplings (gatte) simmered in a spiced yoghurt-based gravy, finished with handpicked spices — often enjoyed with roti or steamed rice."},
+    {n:"Chauka Litti Chokha Platter", f:119, v:true, d:"Litti, a savoury dumpling of wheat flour dough and sattu (roasted gram flour), served on a platter with chokha — roasted eggplant, tomato, onion and green chilli with garlic and mustard oil — alongside melted ghee, spicy pickles, green chutney and fresh coriander."},
+    {n:"Mutton Litti (2 Pcs Mutton + 2 Pcs Litti)", f:299, v:false, d:"Litti served with desi mutton, alongside coriander chutney and fried green chilli — a true flavour of the land."},
+    {n:"Chicken Litti (2 Pcs Chicken + 2 Pcs Litti)", f:249, v:false, d:"Litti served with desi chicken, specially prepared to complement it, with coriander chutney and fried green chilli — a true flavour of the land."},
+    {n:"Paneer Litti Platter", f:219, v:true, d:"A savoury dumpling made with minced paneer and a wheat-flour dough mixture, pairing beautifully with chokha and coriander chutney."},
+    {n:"Chicken Keema Litti Platter", f:229, v:false, d:"Litti stuffed with chicken keema, complemented with chokha, ghee, spicy pickles and fresh coriander."}
+  ]},
+  {cat:"Saturday Special", items:[
+    {n:"Dal Khichari", f:299, v:true, d:"A delicious and comforting meal made from rice and moong lentils, served with chokha, chutney, papad, curd, pickles and desi ghee."}
+  ]}
+]},
+{id:"mains", label:"Main Course", cats:[
+  {cat:"Veg Main Course", items:[
+    {n:"Mushroom Stuffed Special Masala", f:329, v:true, d:"Made with the chef's special recipe."},
+    {n:"Bhindi ka Bhujia", f:149, v:true, d:"A yummy fry of tender, fresh ladies' finger and Indian-style masala."},
+    {n:"Seasonal Vegetable", f:229, v:true, d:"Seasonal vegetables cooked in a special masala with Indian spices."},
+    {n:"Bhindi Masala", f:179, v:true, d:"A yummy fry of tender, fresh ladies' finger and Indian-style masala."},
+    {n:"Aaloo Parwal Bhujia", f:149, v:true, d:"A classic dish of chopped aloo and parwal cooked in special spices with a tomato and onion masala."},
+    {n:"Paneer Bhujia", f:229, v:true, d:"Grated paneer cooked in an onion-tomato masala and finished with kasoori methi."},
+    {n:"Palak Corn", f:249, v:true, d:"A heathy green curry of palak gravy cooked with corn and Indian spices."},
+    {n:"Aaloo Palak", f:219, v:true, d:"A healthy dish of potatoes tossed with aromatic spinach and mild spices."},
+    {n:"Aaloo Dum Kashmiri", f:229, v:true, d:"A signature dish from Kashmiri cuisine — baby potatoes fried and simmered in a yoghurt-based gravy."},
+    {n:"Aaloo Dum Banarasi", f:249, v:true, d:"Baby potatoes boiled and fried in a spicy tomato-onion-cashew gravy."},
+    {n:"Aaloo Methi", f:199, v:true, d:"Fragrant fenugreek and potatoes cooked to a delicious, fried finish."},
+    {n:"Navrattam Korma", f:279, v:true, d:"Fresh seasonal vegetables and dry fruits in a rich cashew-nut gravy."},
+    {n:"Veg Korma", f:229, v:true, d:"An aromatic Indian gravy preparation made up of Indian spices and vegetables."},
+    {n:"Chauka Special Kofta", f:299, v:true, d:"Made with the chef's special recipe."},
+    {n:"Chauka Special Veg", f:329, v:true, d:"Chauka special veg, prepared with the chef's special recipe."},
+    {n:"Paneer Kofta", f:289, v:true, d:"Soft but crispy paneer koftas, cooked in a deliciously moderate spiced, aromatic, smooth and rich onion-tomato-cashew based creamy gravy."},
+    {n:"Nargisi Kofta", f:289, v:true, d:"A popular Indian dish where koftas made of paneer are deep-fried and served with a creamy, spiced tomato-based curry."},
+    {n:"Gobhi Masallam", f:279, v:true, d:"Tandoori-cooked gobhi in a house-special red gravy, seasoned with Indian spices."},
+    {n:"Shabnam Curry", f:289, v:true, d:"Made with the chef's special recipe."},
+    {n:"Palak Paneer", f:269, v:true, d:"An irresistible combination of paneer and spinach, tempered with garlic and Indian spices."},
+    {n:"Mushroom Kadhai", f:299, v:true},
+    {n:"Mushroom Do Pyaza", f:289, v:true},
+    {n:"Lahsooni Palak", f:239, v:true, d:"An easy and simple spinach-based curry with a generous amount of garlic flavour — ideal served with a choice of Indian flatbreads."},
+    {n:"Paneer Chatpata", f:279, v:true, d:"This dish has all the flavours your taste buds crave — hot, sweet, spicy, tangy and sour — with juicy paneer along."},
+    {n:"Soya Chap Masala", f:299, v:true, d:"Soya nuggets tossed in a rich gravy of plenty of Indian masalas."},
+    {n:"Veg Kofta", f:229, v:true, d:"With plenty of tasty components and a yummy filling, this well-served kofta is a vegetarian delight."},
+    {n:"Veg Jhalfrezi", f:299, v:true, d:"Assorted vegetables in a tomato gravy with onions, pepper and an exotic herb-and-spice blend."},
+    {n:"Stuffed Capsicum", f:269, v:true, d:"Capsicum stuffed with delicious fillings and spices, cooked to perfection."},
+    {n:"Mushroom Masala", f:299, v:true, d:"Fresh, earthy mushrooms cooked in a blend of spices, tomato and onion."},
+    {n:"Mushroom Mattar", f:279, v:true, d:"A vegetarian dish of peas and mushroom cooked in a tomato-based sauce, spiced with a secret Punjabi masala."},
+    {n:"Mushroom Mattar Malai", f:299, v:true, d:"Mushrooms and green peas cooked in a creamy gravy along with mild spices."},
+    {n:"Mushroom Butter Masala", f:299, v:true, d:"Button mushrooms sautéed with Indian spices and herbs in a buttery, onion-based gravy."},
+    {n:"Mushroom Tikka Butter Masala", f:329, v:true, d:"A delicious Punjabi-style, one-pot mushroom curry made with white button mushrooms in a spiced onion-tomato gravy."},
+    {n:"Paneer Pasanda", f:289, v:true, d:"A delectable and exotic dish made with fried paneer pieces, stuffed with dry fruits and served in an aromatic, rich creamy gravy."},
+    {n:"Paneer Kolhapuri", f:279, v:true, d:"A delectably spicy dish — paneer cubes simmered in a fiery, red-chilli-based gravy seasoned with aromatic spices."},
+    {n:"Paneer Corn", f:279, v:true, d:"Paneer and corn cooked in a rich tomato-onion gravy, finished with cream and select spices."},
+    {n:"Paneer Lababdar", f:289, v:true, d:"Soft and succulent paneer dunked in a creamy, mildly tangy and faintly sweet gravy."},
+    {n:"Paneer Handi", f:289, v:true, d:"Dices of paneer tossed in an aromatic gravy of onion, tomato and robust spices, served as a semi-gravy."},
+    {n:"Shahi Paneer", f:289, v:true, d:"A creamy indulgence — paneer cubes cooked in a tomato gravy seasoned with Indian spices."},
+    {n:"Mattar Paneer", f:249, v:true, d:"A protein-packed dish with seasoned peas and paneer, served with butter."},
+    {n:"Paneer Tikka Masala", h:249, f:399, v:true, d:"Cottage cheese cooked in the tandoor with onions, capsicum and tomato, dipped in a robust tomato and onion-based gravy."},
+    {n:"Paneer Tikka Butter Masala", h:269, f:399, v:true, d:"Paneer cubes cooked in the tandoor with onions, capsicum and tomato, dipped in a robust, buttery tomato-onion gravy."},
+    {n:"Paneer Do Pyaza", f:289, v:true, d:"A creamy curry of soft, succulent paneer and plenty of onions in a wonderful medley of spices, herbs and tomatoes."},
+    {n:"Kadhai Paneer", f:279, v:true, d:"Soft paneer cubes cooked with capsicum, cashew paste, tomato puree and freshly ground kadhai masala."},
+    {n:"Paneer Butter Masala", f:299, v:true, d:"A rich, buttery paneer butter masala tossed in your favourite spices and herbs."},
+    {n:"Aaloo Do Pyaza", f:189, v:true, d:"A creamy curry of soft, succulent potatoes and plenty of onions in a wonderful medley of spices, herbs and tomatoes."},
+    {n:"Mrs. Aaloo Dutt (Aaloo Nargisi)", f:189, v:true, d:"Made with the chef's special recipe."},
+    {n:"Dadi da Dhaniya Aaloo (Aaloo Dhaniya)", f:289, v:true, d:"A healthy green dish, prepared with potatoes cooked in a coriander masala with spices."},
+    {n:"Jeera wala Aaloo", f:199, v:true, d:"A flavourful and delicious dish made using potatoes, spices and cumin seeds."},
+    {n:"Aaloo Gobhi Adrakhi", f:229, v:true, d:"A popular Indian dish in which potatoes and cauliflower are cooked with ginger, onions, tomatoes and spices."},
+    {n:"Aaloo Mattar", f:189, v:true, d:"Potatoes and green peas cooked in a North Indian-style gravy of onion and tomato."},
+    {n:"Kofta Malai Marke (Malai Kofta)", f:289, v:true, d:"Cottage-cheese koftas cooked in a cashew and tomato gravy that is white, sweet and salty."},
+    {n:"Bhindi Do Pyaza", f:179, v:true, d:"A creamy curry of fresh bhindi and plenty of onions in a wonderful medley of spices, herbs and tomatoes."},
+    {n:"Mix Vegetable", f:229, v:true, d:"An aromatic curry made by cooking a mixture of fresh veggies in a luscious onion-tomato gravy."}
+  ]},
+  {cat:"Non-Veg Main Course", items:[
+    {n:"Mutton Istu", f:449, v:false, d:"Made with the chef's special recipe."},
+    {n:"Rara Mutton", f:469, v:false, d:"A flavourful and juicy dish of mutton chunks and mutton mince, cooked in Indian spices."},
+    {n:"Mutton Kali Mirch", f:449, v:false, d:"Mutton pieces cooked in a creamy gravy with onion and cracked pepper."},
+    {n:"Mutton Kassa", f:449, v:false, d:"A rich dish with a velvety gravy served with mutton cooked in different spices."},
+    {n:"Mutton Rogan Josh", f:449, v:false, d:"A much-loved recipe of mutton morsels, cooked in a freshly ground spice blend, simmered to perfection — best savoured with jeera rice or roti."},
+    {n:"Mutton Masala", f:449, v:false, d:"A mouth-watering, masaledar masala curry made with red meat."},
+    {n:"Bhuna Mutton", f:449, v:false, d:"Tawa-roasted cubed mutton with a thick gravy flavoured with a blend of different Indian spices."},
+    {n:"Mutton Kadai Peshawari", f:449, v:false, d:"A perfectly balanced dish with juicy mutton chunks cooked in an onion-tomato gravy with freshly ground, whole spicy masala."},
+    {n:"Mutton Keema", f:449, v:false, d:"Melt-in-the-mouth minced mutton cooked on a tawa with onion, tomato and spices."},
+    {n:"Laal Maans", h:229, f:379, v:false, d:"Braised mutton with chillies, garlic and clarified butter."},
+    {n:"Fish Curry", v:false, d:"The ever-famous and favourite king fish, cooked with fresh Indian spices in a spicy curry."},
+    {n:"Fish Masala", h:249, f:379, v:false, d:"Tender fish slow-cooked in a blend of spices with a perfect dash of garam masala and coconut."},
+    {n:"Fish Do Pyaza", h:229, f:379, v:false, d:"Fish pieces cooked in a variety of spices, yoghurt and kasoori methi with lots of onions."},
+    {n:"Egg Curry", h:169, f:249, v:false, d:"Chopped boiled eggs in a spicy gravy of an array of spices."},
+    {n:"Egg Masala", h:169, f:259, v:false, d:"A shallow-fried boiled egg, treated and served in true desi-style, North Indian onion-based masala curry."},
+    {n:"Omelette Curry", f:175, v:false, d:"A delicious gravy prepared with onion and tomato masala and Indian spices, topped with an egg omelette."},
+    {n:"Egg Do Pyaza", h:169, f:269, v:false, d:"Boiled eggs cooked in a variety of spices, yoghurt and kasoori methi with lots of onions."},
+    {n:"Prawn Curry", f:599, v:false, d:"Fresh prawns cooked in an authentic homestyle onion and tomato gravy."},
+    {n:"Chicken Istu", h:239, f:389, v:false, d:"Made with the chef's special recipe."},
+    {n:"Chicken Shahi Korma", h:239, f:389, v:false, d:"Chicken cooked with cashew, raisins and an onion-based gravy."},
+    {n:"Chicken Dehati", h:239, f:379, v:false, d:"Chicken pieces cooked in a special homestyle recipe, dehati style."},
+    {n:"Chicken Irani", h:239, f:389, v:false, d:"Irani chicken prepared with ginger, tomatoes, onion, chicken and a bunch of aromatic spices."},
+    {n:"Chicken Keema", h:239, f:389, v:false, d:"Dry chicken keema sautéed with onion, topped with sliced onions and special seasoning."},
+    {n:"Kadhai Chicken", h:239, f:389, v:false, d:"A simple yet amazingly flavourful chicken dish made with succulent boneless chicken cubes, capsicum, cashew paste, tomato puree and freshly ground kadhai masala."},
+    {n:"Chicken Butter Masala", h:239, f:389, v:false, d:"A classic dish of tender, boneless chicken chunks served in a mildly spicy, buttery gravy."},
+    {n:"Chicken Tikka Butter Masala", h:249, f:399, v:false, d:"Marinated, boneless chicken pieces traditionally cooked in a tandoor and served in a subtly spiced, creamy tomato gravy."},
+    {n:"Murg Masallam", f:749, v:false, d:"Whole tandoori chicken stuffed with minced meat, cooked in a spicy tomato-based gravy."},
+    {n:"Chicken Korma", f:399, v:false, d:"Chicken pieces cooked in a traditional style, simmered in a host of spices with a mixture of fried onions and yoghurt."},
+    {n:"Leg Kebab Butter Masala (2 Pcs)", f:379, v:false, d:"A classic dish of tender chicken legs served in a mildly spicy, buttery gravy."},
+    {n:"Reshmi Kebab Butter Masala", h:249, f:399, v:false, d:"A delectable dish where chicken reshmi kebabs are cooked in a thick, tomato-based curry with lots of butter."},
+    {n:"Chicken Kashmiri", h:239, f:389, v:false, d:"A dish full of authentic spices with a unique Kashmiri twist."},
+    {n:"Chauka Special Chicken", f:749, v:false, d:"Made with the chef's special recipe."},
+    {n:"Chicken Muglai", h:239, f:389, v:false, d:"Chicken cooked in a cashew-nut and onion-based gravy with egg, in a yellow gravy."},
+    {n:"Chicken Afgani Masala", h:249, f:399, v:false, d:"A rich, flavourful and hearty dish of boneless chicken cubes bursting with the flavour of Afghani spices."},
+    {n:"Chicken Malai Tikka Butter Masala", h:249, f:399, v:false, d:"A creamy, rich, flavoured gravy prepared with the chef's special recipe."},
+    {n:"Mutton Kadai", f:449, v:false, d:"A perfectly balanced dish with juicy mutton chunks cooked with onion, tomato gravy and freshly ground, whole spicy masala."},
+    {n:"Mutton Palak", f:449, v:false, d:"A delicious blend of tender, succulent pieces of mutton cooked in a spinach gravy mixed with freshly ground spices — nourishing and satisfying."},
+    {n:"Mutton Do Pyaza", f:449, v:false, d:"Juicy mutton pieces cooked in a variety of spices, yoghurt and kasoori methi with lots of onions."},
+    {n:"Chicken Handi", h:239, f:389, v:false, d:"A rich and aromatic North Indian delicacy — chicken pieces slow-cooked in a thick, creamy tomato-onion gravy, infused with traditional spices, butter and fresh cream."},
+    {n:"Rara Chicken", h:279, f:469, v:false, d:"A combination of meat chunks and keema, in a spicy and creamy curry, with boneless chicken."},
+    {n:"Chicken Do Pyaza", h:239, f:389, v:false, d:"Chicken cooked in a variety of spices, yoghurt and kasoori methi with lots of onions."},
+    {n:"Chicken Masala", h:239, f:389, v:false, d:"Chunks of chicken cooked in a special ground masala with a delicious onion-tomato gravy."},
+    {n:"Murg Saag Wala", h:249, f:389, v:false, d:"Chicken marinated in coriander and cooked in a healthy spinach curry."},
+    {n:"Chauka Dhaniya Murg (Dhaniya Chicken)", h:239, f:389, v:false, d:"Chicken pieces cooked with a classic dhaniya-flavoured gravy in an onion-tomato masala with Indian spices."},
+    {n:"Chicken Kali Mirch", h:249, f:399, v:false, d:"Chunks of chicken cooked in a creamy gravy with the flavours of kali mirch (black pepper) powder."},
+    {n:"Chicken Kassa", h:239, f:389, v:false, d:"A rich dish with a velvety gravy, served with chicken cooked in different spices."},
+    {n:"Bhuna Chicken", h:239, f:389, v:false, d:"Smoky, melt-in-the-mouth bhuna chicken, simmered in a rich gravy."},
+    {n:"Chicken Bharta", f:389, v:false, d:"Tender, hand-pulled chicken cooked with our signature garam masala in a mild gravy flavoured with green chillies and fresh coriander."}
+  ]}
+]},
+{id:"ricebread", label:"Rice, Dal & Bread", cats:[
+  {cat:"Rice & Biryani", items:[
+    {n:"Mutton Dum Biryani", f:349, v:false, d:"Tender pieces of mutton mixed with fragrant rice and tangy herbs for an absolutely spicy delight."},
+    {n:"Chicken Dum Biryani", f:249, v:false, d:"Deliciously decadent, flavoured dum rice layered with fried chicken and Indian whole spices, dum-cooked to perfection."},
+    {n:"Egg Biryani (2 Pcs Egg)", f:229, v:false, d:"Hearty, flavourful boiled eggs slow-cooked with rice in an aromatic masala."},
+    {n:"Kashmiri Pulao", f:199, v:true, d:"A white pulao that comes with green peas and dry fruits."},
+    {n:"Assorted Veg Pulao", f:159, v:true, d:"A dish of ghee-roasted veggies and flavourful rice, with an undertone of aromatic spices."},
+    {n:"Mattar Pulao", f:159, v:true, d:"A healthy matar pulao made from fine-grained basmati rice and the richness of green peas."},
+    {n:"Paneer Pulao", f:179, v:true, d:"A wholesome dish prepared by cooking chopped vegetables, paneer cubes and rice in a flavourful masala."},
+    {n:"Plain Rice", f:129, v:true, d:"Boiled rice."},
+    {n:"Jeera Rice", f:139, v:true, d:"Steamed white rice tempered with cumin seeds in clarified butter."},
+    {n:"Veg Pulao", f:179, v:true, d:"A wholesome and tasty one-pot dish of rice tossed with veggies and mild spices."},
+    {n:"Sahi Pulao", f:199, v:true, d:"A shahi, classic one-pot dish of rice tossed with veggies, kesar, dry fruits and mild spices."},
+    {n:"Veg Biryani", f:189, v:true, d:"An assortment of vegetables, aromatic spices, herbs and basmati cooked rice."},
+    {n:"Navratan Pulao", f:189, v:true, d:"A classic dish of rice and onion that never fails to appease the taste buds."}
+  ]},
+  {cat:"Dal", items:[
+    {n:"Dal Tadka", f:179, v:true, d:"Yellow lentils tempered with garlic and whole cumin, with tomatoes."},
+    {n:"Dal Makhani", f:279, v:true, d:"Black lentils cooked with a generous amount of white butter and cream."},
+    {n:"Dal Butter Fry", f:189, v:true, d:"Loaded with the richness of butter and spices — this lentil curry tastes absolutely irresistible!"},
+    {n:"Plain Dal", f:149, v:true, d:"A comforting and delicious preparation of mixed dal, cooked and tempered with onion and tomato."},
+    {n:"Chauka Special Dal", f:299, v:true, d:"Dal made with lentils and spices, with a touch of tasty Indian whole spices and jeera tempering."},
+    {n:"Mughlai Dal", f:199, v:true, d:"A simple dal made from chana and arhar dals, bottle gourd and tomatoes — the tanginess of the tomatoes meets mild spice."},
+    {n:"Dal Palak", f:199, v:true, d:"A delicious, masaledar spinach dal!"},
+    {n:"Chana Dal Makhana", f:209, v:true, d:"Made with the chef's special recipe."}
+  ]},
+  {cat:"Indian Bread", items:[
+    {n:"Pudeena Kulcha", f:59, v:true, d:"A super-soft, slightly puffed flatbread made from refined flour, stuffed with a pudina filling and baked in a tandoor."},
+    {n:"Plain Kulcha", f:49, v:true, d:"A super-soft, slightly puffed flatbread made from refined flour and baked in a tandoor."},
+    {n:"Butter Kulcha", f:59, v:true, d:"A super-soft, slightly puffed flatbread baked in a tandoor and topped with butter."},
+    {n:"Masala Kulcha", f:69, v:true, d:"A super-soft, slightly puffed flatbread stuffed with a vegetable filling and baked in a tandoor."},
+    {n:"Chauka Special Kulcha", f:129, v:true, d:"The chef's special."},
+    {n:"Paneer Kulcha", f:79, v:true, d:"A super-soft, slightly puffed flatbread stuffed with a paneer filling and baked in a tandoor."},
+    {n:"Chicken Keema Stuffed Kulcha", f:159, v:false, d:"A super-soft, slightly puffed flatbread stuffed with chicken-keema filling and baked in a tandoor."},
+    {n:"Lachha Paratha", f:59, v:true, d:"Crispy, flaky parathas."},
+    {n:"Tandoori Roti Plain", f:30, v:true, d:"Whole-wheat roti cooked in a tandoor."},
+    {n:"Tandoori Roti Butter", f:35, v:true, d:"Whole-wheat roti cooked in a tandoor and topped with butter."},
+    {n:"Plain Naan", f:50, v:true, d:"Yummy, soft naan baked in a tandoor until perfectly done."},
+    {n:"Butter Naan", f:55, v:true, d:"A simple, leavened flatbread topped with butter."},
+    {n:"Garlic Naan", f:59, v:true, d:"A simple, leavened flatbread flavoured with garlic."},
+    {n:"Missi Roti", f:55, v:true, d:"A nutty-flavoured, savoury flatbread."},
+    {n:"Satte Pe Satta (Bread Basket)", f:329, v:true, d:"A generous basket of assorted breads."},
+    {n:"Veg Stuffed Naan", f:69, v:true, d:"A soft, leavened flatbread stuffed with spices."}
+  ]},
+  {cat:"Paratha Platter", items:[
+    {n:"Aaloo Paratha", f:79, v:true, d:"A whole-wheat paratha stuffed with mashed aloo, spices and green chillies."},
+    {n:"Paneer Paratha", f:89, v:true, d:"A whole-wheat paratha stuffed with grated paneer, spices and green chillies."},
+    {n:"Onion Paratha", f:79, v:true, d:"A whole-wheat paratha stuffed with minced onion, spices and green chillies."},
+    {n:"Mirchi Paratha", f:79, v:true, d:"A whole-wheat paratha stuffed with spices and green chillies."},
+    {n:"Capsicum Paratha", f:89, v:true, d:"A whole-wheat paratha stuffed with grated capsicum, spices and green chillies."},
+    {n:"Sattu Paratha", f:79, v:true, d:"A whole, plain sattu paratha — the healthier option!"},
+    {n:"Lalmirch Paratha", f:79, v:true, d:"A whole-wheat paratha stuffed with spices and red chillies."},
+    {n:"Egg Paratha", f:229, v:false, d:"A whole-wheat paratha stuffed with grated egg, spices and green chillies."},
+    {n:"Chicken Keema Paratha", f:249, v:false, d:"A whole-wheat paratha stuffed with spiced chicken keema, spices and green chillies."},
+    {n:"Mutton Keema Paratha", f:269, v:false, d:"A whole-wheat paratha stuffed with spiced mutton keema, spices and green chillies."}
+  ]}
+]},
+{id:"chinese", label:"Chinese Mains", cats:[
+  {cat:"Veg Chinese Main Course", items:[
+    {n:"Baby Corn Mushroom in Ponzu Sauce", f:249, v:true, d:"A Japanese-style sauce of soy and rice vinegar, tossed with stir-fried button mushrooms and baby corn, with mild spices."},
+    {n:"Mix Vegetable with Baby Corn & Mushroom", f:249, v:true, d:"A classic, healthy dish of assorted veggies tossed with baby corn and mushrooms, with spices."},
+    {n:"Mushroom Chilli", f:299, v:true, d:"Delectable mushrooms cooked in a spicy, tasty chilli sauce — the perfect dish to satisfy your cravings."},
+    {n:"Paneer Chilli", f:269, v:true, d:"Soft paneer slow-cooked with a flavourful chilli sauce and other masalas."},
+    {n:"Veg Manchurian", f:219, v:true, d:"A delicious Indo-Chinese veg Manchurian — a crowd-pleaser, and we love our Indo-Chinese food here."},
+    {n:"Veg Fried Rice", f:199, v:true, d:"A delicious dish of rice stir-fried with finely chopped vegetables."},
+    {n:"Veg Hot Garlic Sauce", f:209, v:true, d:"Mixed-vegetable fried balls tossed in a special hot garlic sauce."},
+    {n:"Veg Chilli Garlic Noodles", f:219, v:true, d:"An Indo-Chinese variation on hakka noodles, mildly hot and delicious."},
+    {n:"Onion Fried Rice", f:199, v:true, d:"A classic dish of rice and onion that never fails to appease the taste buds."},
+    {n:"Paneer Fried Rice", f:229, v:true, d:"A tasty dish of rice, sautéed with spices and loaded with a generous amount of paneer cubes."},
+    {n:"Burnt Garlic Fried Rice", f:219, v:true, d:"An Indo-Chinese fried-rice dish made with rice, mixed vegetables, soy sauce, pepper and lots of garlic."},
+    {n:"Mushroom Fried Rice", f:249, v:true, d:"A flavourful and healthy stir-fry of rice and fresh mushrooms with other vegetables."},
+    {n:"Veg Chowmein", f:199, v:true, d:"Soft noodles worked up in a wok with crunchy vegetables, soy sauce, hot sauce and vinegar."},
+    {n:"Paneer Chowmein", f:229, v:true, d:"Soft noodles worked up in a wok with crunchy paneer, soy sauce, hot sauce and vinegar."},
+    {n:"Chilli Garlic Noodles", f:219, v:true, d:"An Indo-Chinese variation on hakka noodles, mildly hot and delicious."},
+    {n:"Schezwan Noodles", f:219, v:true, d:"A wholesome combo of mouth-watering schezwan sauce and vegetables, tossed with delectable noodles."}
+  ]},
+  {cat:"Non-Veg Chinese Main Course", items:[
+    {n:"Egg Chowmein", f:229, v:false, d:"Soft noodles worked up in a wok with crunchy vegetables, shredded egg, soy sauce, hot sauce and vinegar."},
+    {n:"Chicken Chowmein", f:249, v:false, d:"Soft noodles worked up in a wok with crunchy vegetables, chicken, soy sauce, hot sauce and vinegar."},
+    {n:"Prawn Chowmein", f:419, v:false, d:"Soft noodles worked up in a wok with crunchy vegetables, tender prawns, soy sauce, hot sauce and vinegar."},
+    {n:"Egg Fried Rice", f:249, v:false, d:"Fluffy rice, scrambled eggs and vibrant vegetables stir-fried to perfection — savoury and satisfying."},
+    {n:"Chicken Fried Rice", f:269, v:false, d:"A delightfully wholesome rice dish cooked with soft chicken chunks for an authentic Chinese taste."},
+    {n:"Chicken Onion Fried Rice", f:269, v:false, d:"A delightfully wholesome rice dish cooked with soft chicken chunks and onion for an authentic Chinese taste."},
+    {n:"Prawn Fried Rice", f:419, v:false, d:"A delicious rice dish cooked with tender prawn chunks for an authentic Chinese taste."},
+    {n:"Mixed Fried Rice", f:299, v:false, d:"A mixed fried rice cooked with tender prawns, chicken chunks, veggies and eggs for an authentic Chinese taste."},
+    {n:"Chicken Ginger", f:299, v:false, d:"This chicken dish, flavoured with zesty ginger, is a real tongue-pleaser!"},
+    {n:"Chicken Sweet & Sour", f:299, v:false, d:"Diced chicken tossed in a classic, in-house special sweet and sour gravy along with veggies."},
+    {n:"Chicken Hot Garlic Sauce", f:299, v:false, d:"Fried chicken tossed in our special, spicy hot garlic sauce along with veggies."},
+    {n:"Chicken Chilli Garlic Noodles", f:259, v:false, d:"An Indo-Chinese variation on hakka noodles, giving it a mildly hot and delicious taste."},
+    {n:"Lemon Chicken", f:299, v:false, d:"Lemon-flavoured chicken with notes of green chilli and cream, cooked in a sealed clay pot."},
+    {n:"Chicken Schezwan", f:299, v:false, d:"Coated, deep-fried chicken tosses in a spicy schezwan sauce to delight your taste buds."},
+    {n:"Chicken Black Pepper", f:319, v:false, d:"Chicken pieces cooked in a thick sukka masala along with onion, curry leaves, green chillies and pepper powder."},
+    {n:"Chicken Garlic", f:299, v:false, d:"Chicken pieces marinated and deep-fried, tossed with onion and capsicum in a zesty garlic sauce."},
+    {n:"Chilli Chicken (Bone-In)", f:289, v:false, d:"A delicious dish made with crispy chicken chunks, lightly tossed in a spicy chilli sauce."},
+    {n:"Chilli Chicken (Boneless)", f:299, v:false, d:"A delicious dish made with crispy chicken chunks, lightly tossed in a spicy chilli sauce (boneless)."}
+  ]}
+]},
+{id:"sides", label:"Sides", cats:[
+  {cat:"Papad & Raita", items:[
+    {n:"Pudina Raita", f:79, v:true, d:"A cooling and soothing accompaniment to spicy dishes — also great on its own as a light snack or side dish."},
+    {n:"Cucumber Raita", f:79, v:true, d:"Smooth, salted curd seasoned with roasted cumin and cucumber."},
+    {n:"Boondi Raita", f:79, v:true, d:"A healthy and delicious North Indian accompaniment — masaledar raita with fresh carrot, topped with crispy boondi pearls."},
+    {n:"Mix Veg Raita", f:79, v:true, d:"Finely chopped veggies mixed with fresh curd, herbs and mild spices."},
+    {n:"Papad Dry", f:29, v:true, d:"Crispy fried papad."},
+    {n:"Papad Fry", f:29, v:true, d:"A perfect side to complete your meal."},
+    {n:"Masala Papad", f:59, v:true, d:"Papad topped with veggies, masala and chutney."}
+  ]}
+]},
+{id:"desserts", label:"Desserts", cats:[
+  {cat:"Desserts", items:[
+    {n:"Atom Bomb Kala Jamun", f:79, v:true, d:"Kala jamun is an Indian sweet made with milk solids — these fried balls are dipped in a sugar syrup flavoured with cardamom, rose water and saffron!"},
+    {n:"Choice of Ice Cream", f:79, v:true, d:"Your choice of ice cream."},
+    {n:"Shahi Tukda", f:99, v:true, d:"A freshly made cake of fried bread slices soaked in a sweetened milk syrup, flavoured with cardamom and saffron and garnished with nuts."},
+    {n:"Rasmalai", f:139, v:true, d:"A traditional Indian sweet of soft pieces of cheese and milk in a sugary syrup, topped with saffron and pistachio."},
+    {n:"Khajoor Gur ka Kheer", f:109, v:true, d:"A traditional Indian dessert made with dates (khajoor) and jaggery (gur), flavoured with cardamom and cinnamon."},
+    {n:"Lauki ka Kheer", f:99, v:true, d:"A traditional Indian dessert of grated bottle gourd (lauki) cooked with milk, flavoured with cardamom and saffron, and sweetened with sugar or condensed milk."},
+    {n:"Gajar ka Halwa", f:99, v:true, d:"Gajar ka halwa, or gajrela, is a traditional North Indian dessert made by simmering fresh grated carrots, milk, sugar, desi ghee and dry fruits."},
+    {n:"Chauka Special Kheer", f:149, v:true, d:"Chauka special kheer, made with the chef's special recipe."},
+    {n:"Assorted Cold Drinks", f:49, v:true}
+  ]}
+]},
+{id:"drinks", label:"Beverages", cats:[
+  {cat:"Shakes", items:[
+    {n:"Vanilla Shake", f:149, v:true, d:"A smooth and creamy concoction of vanilla ice cream and milk — a perfect partner for any meal."},
+    {n:"Dark Fantasy Shake", f:159, v:true, d:"A rich and indulgent drink, perfect for satisfying a sweet tooth — made from chocolate ice cream, milk, chocolate sauce and other flavourings."},
+    {n:"Oreo Shake", f:159, v:true, d:"A creamy and indulgent drink for cookie lovers, made from a blend of vanilla ice cream, milk and Oreo cookies."},
+    {n:"Kit Kat Shake", f:159, v:true, d:"A rich taste and unique mouth-feel, punctuated by crunchy bits of Kit Kat, blended with vanilla ice cream."},
+    {n:"Fresh Fruit Shake", f:169, v:true, d:"A classic, thick shake prepared with all fresh seasonal fruits, thick creamy milk and sugar."},
+    {n:"Banana Shake", f:159, v:true, d:"Freshly blended banana, milk and dry fruits — a combination loved by fitness enthusiasts and foodies alike."},
+    {n:"Mango Shake", f:159, v:true, d:"Delicious mango magic, perfect for hot days — blended from fresh Alphonso mangoes, milk and cream."},
+    {n:"Strawberry Shake", f:159, v:true, d:"A thick shake made from a plush of handpicked strawberries."},
+    {n:"Pineapple Shake", f:159, v:true, d:"A very healthy smoothie of pineapple chunks and milk, said to be good for gut health and weight loss."},
+    {n:"Chocolate Shake", f:159, v:true, d:"A delicious, thick and creamy chocolate shake, loved most by the young at heart."},
+    {n:"Butterscotch Shake", f:159, v:true, d:"A cold-blended beverage with a smooth and buttery flavour."},
+    {n:"Kesar Pista Shake", f:169, v:true, d:"The classic Indian flavours of saffron and almond, blended to prepare a drink that's distinctively desi and unforgettably yum."}
+  ]},
+  {cat:"Health is Wealth", items:[
+    {n:"Fruit Smoothie", f:179, v:true, d:"A creamy and delicious beverage of blended fruits mixed with yoghurt, milk or ice cream — refreshing and healthy, filled with vitamins and minerals, perfect any time of day."},
+    {n:"Vegetable Smoothie", f:149, v:true, d:"A healthy and delicious drink made from a mix of vegetables like spinach, kale, cucumber, celery, carrots and beets."},
+    {n:"Cold Coffee", f:149, v:true, d:"Coffee blended with cold milk and ice — very tempting and mouth-watering."},
+    {n:"Cold Coffee with Ice Cream", f:179, v:true, d:"Rich, creamy cold coffee topped with scoops of vanilla ice cream."},
+    {n:"Ice Tea", f:99, v:true, d:"A popular, refreshing beverage made from tea leaves, water and sugar, enjoyed chilled with ice."},
+    {n:"Sweet Lassi", f:99, v:true, d:"A creamy, frothy yoghurt-based drink, blended with water and sugar."},
+    {n:"Salted Lassi", f:99, v:true, d:"Salted lassi, made with a traditional yoghurt-based beverage, whipped to a glistening shine and garnished."},
+    {n:"Black Coffee", f:49, v:true, d:"Strong, brewed hot black coffee."},
+    {n:"Coffee", f:69, v:true, d:"Rich coffee beans, blended perfectly with creamy hot milk and sugar."},
+    {n:"Alkaline Water (Detox Water)", f:99, v:true, d:"Freshly cut exotic fruits steeped in fresh drinking water overnight to turn it alkaline — an immense energy booster and body cleanser, truly a divine drink."}
+  ]},
+  {cat:"Mocktails", items:[
+    {n:"Mataka Sharbat", f:129, v:true, d:"A delicious and healthy drink, perfect to quench your thirst and cool down on a hot summer day — a flavourful, unique blend of sweet, floral and spicy notes."},
+    {n:"Panchfali Sharbat", f:129, v:true, d:"A delightful and healthy drink for any occasion, with a unique blend of fruits, herbs and spices."},
+    {n:"Dhulhaniya Sharbat", f:129, v:true, d:"Prepared by blending water, sugar and a variety of herb and spice powders like fennel, cardamom and cumin."},
+    {n:"Lichi Da Sharbat", f:129, v:true, d:"A deliciously sweet and refreshing drink, perfect for hot summer days — its fruity sweetness and floral aroma make it a favourite for people of all ages."},
+    {n:"Nachaniya Cola", f:129, v:true, d:"A unique style of cola, prepared by adding a special in-house masala."},
+    {n:"Chauka Nimbu Soda", f:129, v:true, d:"Made with simple ingredients like fresh-squeezed lemon juice, soda water and sugar — sweet, tangy and bubbly."},
+    {n:"Hara Hara Pudina Sharbat", f:129, v:true, d:"A popular drink made from fresh mint leaves, lemon, sugar and water."},
+    {n:"Choice of Cold Drinks", f:49, v:true}
+  ]}
+]}
+];
+
+/* ===================== RENDER ===================== */
+const menuRoot = document.getElementById('menuRoot');
+const chipRow = document.getElementById('chipRow');
+const resultMeta = document.getElementById('resultMeta');
+const noResults = document.getElementById('noResults');
+const searchInput = document.getElementById('searchInput');
+
+let activeCat = 'all';
+let activeVeg = 'all';
+
+/* Build chips from category names */
+const allCats = [];
+MENU.forEach(g => g.cats.forEach(c => allCats.push(c.cat)));
+chipRow.innerHTML = '<button class="chip active" data-cat="all" type="button">All Dishes</button>' +
+  allCats.map(c => `<button class="chip" data-cat="${escAttr(c)}" type="button">${c}</button>`).join('');
+
+function escAttr(s){ return s.replace(/"/g,'&quot;'); }
+function escHTML(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function priceHTML(it){
+  if(it.h && it.f){
+    return `<div class="dish-price"><div class="hf"><b>₹${it.h}</b><span>Half</span></div><div class="hf"><b>₹${it.f}</b><span>Full</span></div></div>`;
+  }
+  if(it.f){
+    return `<div class="dish-price">₹${it.f}${it.u ? `<span class="unit">/ ${it.u}</span>` : ''}</div>`;
+  }
+  return `<div class="dish-price muted">Ask your server</div>`;
+}
+
+function dotHTML(v){
+  if(v === 'b') return `<span class="dot veg" title="Veg &amp; Non-Veg available"></span><span class="dot nonveg" title="Veg &amp; Non-Veg available"></span>`;
+  return v ? `<span class="dot veg" title="Vegetarian"></span>` : `<span class="dot nonveg" title="Non-Vegetarian"></span>`;
+}
+
+let cardId = 0;
+function renderAll(){
+  const frag = document.createDocumentFragment();
+  let visibleCount = 0;
+
+  MENU.forEach(group => {
+    const groupSection = document.createElement('section');
+    groupSection.id = group.id;
+    groupSection.className = 'menu-section';
+    groupSection.style.scrollMarginTop = '76px';
+
+    let groupHasVisible = false;
+    let groupInner = `<div class="wrap">
+      <div class="group-title"><span class="eyebrow">Chauka Kitchen</span><h2>${group.label}</h2></div>
+      <div class="group-rule"></div>`;
+
+    group.cats.forEach(cat => {
+      const matchesCat = (activeCat === 'all' || activeCat === cat.cat);
+      let catCardsHTML = '';
+      let catHasVisible = false;
+
+      cat.items.forEach(it => {
+        const matchesVeg = activeVeg === 'all' ||
+          (activeVeg === 'veg' && (it.v === true || it.v === 'b')) ||
+          (activeVeg === 'nonveg' && (it.v === false || it.v === 'b'));
+        const q = searchInput.value.trim().toLowerCase();
+        const matchesSearch = !q || it.n.toLowerCase().includes(q) || (it.d||'').toLowerCase().includes(q) || cat.cat.toLowerCase().includes(q);
+
+        if(matchesCat && matchesVeg && matchesSearch){
+          catHasVisible = true;
+          groupHasVisible = true;
+          visibleCount++;
+          cardId++;
+          const hasDesc = !!it.d;
+          catCardsHTML += `
+          <article class="dish-card">
+            <div class="dish-top">
+              <div class="dish-name">${dotHTML(it.v)}${escHTML(it.n)}</div>
+              ${priceHTML(it)}
+            </div>
+            ${hasDesc ? `
+            <button class="detail-toggle" aria-expanded="false" aria-controls="desc-${cardId}" data-target="desc-${cardId}" type="button">
+              Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="dish-desc" id="desc-${cardId}"><p>${escHTML(it.d)}</p></div>` : '' }
+          </article>`;
+        }
+      });
+
+      if(catHasVisible){
+        groupInner += `
+        <div class="category-block">
+          <div class="cat-head"><div class="arch-cap"></div><h3>${cat.cat}</h3></div>
+          <div class="card-grid">${catCardsHTML}</div>
+        </div>`;
+      }
+    });
+
+    groupInner += `</div>`;
+    groupSection.innerHTML = groupInner;
+    if(groupHasVisible) frag.appendChild(groupSection);
+  });
+
+  menuRoot.innerHTML = '';
+  menuRoot.appendChild(frag);
+  noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  resultMeta.textContent = visibleCount + (visibleCount === 1 ? ' dish' : ' dishes') + ' on the table';
+
+  /* re-bind detail toggles */
+  menuRoot.querySelectorAll('.detail-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const desc = document.getElementById(btn.dataset.target);
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      desc.style.maxHeight = open ? '0px' : desc.scrollHeight + 20 + 'px';
+    });
+  });
+}
+
+/* ===================== CONTROLS ===================== */
+chipRow.addEventListener('click', e => {
+  const btn = e.target.closest('.chip');
+  if(!btn) return;
+  chipRow.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  activeCat = btn.dataset.cat;
+  renderAll();
+});
+
+document.querySelector('.veg-toggle').addEventListener('click', e => {
+  const btn = e.target.closest('button');
+  if(!btn) return;
+  document.querySelectorAll('.veg-toggle button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeVeg = btn.dataset.veg;
+  renderAll();
+});
+
+let searchTimer;
+searchInput.addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(renderAll, 120);
+});
+
+/* ===================== NAV SCROLLSPY ===================== */
+const navLinks = document.querySelectorAll('#navLinks a');
+const sectionIds = MENU.map(g => g.id);
+function onScroll(){
+  let current = '';
+  sectionIds.forEach(id => {
+    const el = document.getElementById(id);
+    if(el && el.getBoundingClientRect().top < 140) current = id;
+  });
+  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+
+  const totop = document.getElementById('totop');
+  totop.classList.toggle('show', window.scrollY > 700);
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+
+document.getElementById('totop').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+renderAll();
+</script>
+</body>
+</html>
